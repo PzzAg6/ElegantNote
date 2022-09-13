@@ -163,8 +163,10 @@
 
 \RequirePackage[
   backend=\ELEGANT@bibend,
-  citestyle=\ELEGANT@citestyle,
-  bibstyle=\ELEGANT@bibstyle]{biblatex}
+  style=\ELEGANT@citestyle,
+  bibstyle=\ELEGANT@bibstyle,
+  maxcitenames = 1,
+  maxbibnames = 99]{biblatex}
 
 
 \RequirePackage{appendix}
@@ -549,7 +551,7 @@
     color,
     mode,
     chinesefont,
-    cite,
+    citestyle,
     bibstyle,
     math,
     lang,
