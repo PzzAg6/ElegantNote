@@ -1,22 +1,29 @@
 %!TEX program = xelatex
-\documentclass[cn,hazy,blue,14pt,screen]{elegantnote}
+%使用biblatex,biber编译
+%引用样式参见https://sharelatex.psi.ch/learn/Biblatex_citation_styles
+%注意引入elegant.cls
+\documentclass[cn,hazy,blue,14pt,normal,citestyle = authoryear]{elegantnote}
 \title{ElegantNote：一个优美的 \LaTeX{} 笔记模板}
 
-\author{邓东升}
-\institute{Elegant\LaTeX{} Program}
+\author{庞泽钊}
+%\institute{Elegant\LaTeX{} Program}
 
-\version{2.40}
+%\version{2.40}
 \date{\zhtoday}
+%引用格式设置
+
 
 \usepackage{array}
+%\usepackage{biblatex}
+\addbibresource{reference}
 
 \begin{document}
 
 \maketitle
 
-\centerline{
-  \includegraphics[width=0.2\textwidth]{logo-blue.png}
-}
+%\centerline{
+%  \includegraphics[width=0.2\textwidth]{logo-blue.png}
+%}
 
 \section{ElegantNote 使用说明}
 
@@ -250,7 +257,9 @@ Let $z$ be some element of $xH \cap yH$.  Then $z = xa$ for some $a \in H$, and 
       \author{author 1\\ org. 1 \and author 2 \\ org. 2 }
     \end{lstlisting}
 \end{enumerate}
+\section{引用测试}
+引用两篇文献，这是第一篇\cite{hadjar_branch-and-cut_2006}，这是第二篇\cite{irnich_path-reduced_2010}。
 
-%\printbibliography[heading=bibintoc, title=\ebibname]
+\printbibliography[heading=bibintoc, title=\ebibname]
 
 \end{document}
